@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800&subset=latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+  blockquote:before, blockquote:after {
+    content: '';
+    content: none; }
+
+q {
+  quotes: none; }
+  q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Peace Sans';
+  src: url(../fonts/peace_sans.woff); }
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #2A394F;
+  background-color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: auto; }
+
+.text-hidden {
+  height: 0;
+  text-indent: -1000000px; }
+
+.page-header {
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 57px; }
+  .page-header .drop-down-menu {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    height: 8px;
+    padding: 5px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transition: 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear;
+    transition: 0.3s transform linear, 0.3s -webkit-transform linear;
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    .page-header .drop-down-menu.drop-down-menu-change {
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+      bottom: 10px; }
+  .page-header .logo-div {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    width: 115px; }
+  .page-header .nav-links {
+    display: none; }
+    .page-header .nav-links.nav-opened {
+      display: block;
+      margin-top: 30px;
+      background-color: #FFFFFF;
+      opacity: 0.95;
+      position: relative;
+      z-index: 100; }
+      .page-header .nav-links.nav-opened::before {
+        position: absolute;
+        content: '';
+        border-bottom: 10px solid #FFFFFF;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        height: 20px;
+        top: -29px;
+        right: 25px; }
+      .page-header .nav-links.nav-opened li {
+        padding: 30px;
+        border-bottom: 1px ridge;
+        text-align: center; }
+        .page-header .nav-links.nav-opened li:nth-child(8), .page-header .nav-links.nav-opened li:nth-child(9) {
+          display: none; }
+        .page-header .nav-links.nav-opened li a {
+          text-decoration: none;
+          color: #020410;
+          text-transform: uppercase; }
+        .page-header .nav-links.nav-opened li:hover {
+          background-color: #C7C7C7;
+          font-weight: bold;
+          border-left: 3px solid #BC2E3A; }
+
+.main-page header {
+  background: url(../images/background-header.png) center top no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 200;
+  height: 100vh; }
+  .main-page header .button-read {
+    letter-spacing: 0.025em;
+    background-color: #FFFFFF;
+    border: 0;
+    padding: 14px 32px;
+    font-size: 21.18px;
+    font-weight: bold;
+    color: #242424;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47);
+    position: relative;
+    bottom: -90vh; }
+    .main-page header .button-read:hover {
+      background-color: #242424;
+      color: #FFFFFF; }
+  .main-page header .img-header-model {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 60px; }
+  .main-page header .img-header-text {
+    position: absolute;
+    width: 90vw;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 105px; }
+.main-page section {
+  font-weight: 300; }
+  .main-page section h3 {
+    font-size: 5.5rem;
+    font-family: "Peace Sans"; }
+  .main-page section h4 {
+    font-size: 3rem;
+    letter-spacing: -0.025em; }
+  .main-page section p {
+    font-size: 1.7rem;
+    line-height: 3rem; }
+.main-page .section-about .button-read {
+  letter-spacing: 0.025em;
+  background-color: #BC2E3A;
+  border: 0;
+  padding: 14px 32px;
+  font-size: 21.18px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  transition: 0.4s ease-in-out;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47); }
+  .main-page .section-about .button-read:hover {
+    background-color: #FFFFFF;
+    color: #BC2E3A; }
+
+/*# sourceMappingURL=style.css.map */

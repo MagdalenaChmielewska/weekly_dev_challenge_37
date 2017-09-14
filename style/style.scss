@@ -1,0 +1,161 @@
+@import 'style-reset';
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800&subset=latin-ext');
+
+@font-face {
+    font-family: 'Peace Sans';
+    src: url(../fonts/peace_sans.woff);
+}
+
+$font-family-lato: 'Lato', sans-serif;
+$font-family-open: 'Open Sans', sans-serif;
+$font-family-peace: 'Peace Sans';
+
+* {
+     box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    height: 100%;
+    font-family: $font-family-open;
+    color: #2A394F;                     // trzeba jeszcze sparwdzic jaki to ma miec kolor
+    background-color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: auto;
+}
+.text-hidden {
+    height: 0;
+    text-indent: -1000000px;
+}
+.page-header {
+    font-family: $font-family-lato;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 57px;
+    .drop-down-menu {
+        position: absolute;
+        top: -30px;
+        right: 30px;
+        height: 8px;
+        padding: 5px;
+        border: solid #FFFFFF;
+        border-width: 0 2px 2px 0;
+        @include transition-transform;
+        cursor: pointer;
+        @include transform(rotate(45deg));
+        &.drop-down-menu-change {
+            @include transform(rotate(-135deg));
+            bottom: 10px;
+        }
+    }
+    .logo-div {
+        position: absolute;
+        top: -30px;
+        left: 30px;
+        width: 115px;
+    }
+    .nav-links {
+        display: none;
+        &.nav-opened {
+            display: block;
+            margin-top: 30px;
+            background-color: #FFFFFF;
+            opacity: 0.95;
+            position: relative;
+            z-index: 100;
+            &::before {
+                position: absolute;
+                content: '';
+                border-bottom: 10px solid #FFFFFF;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                height: 20px;
+                top: -29px;
+                right: 25px;
+            }
+            li {
+                padding: 30px;
+                border-bottom: 1px ridge;
+                text-align: center;
+                &:nth-child(8), &:nth-child(9) {
+                    display: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: #020410;
+                    text-transform: uppercase;
+                }
+                &:hover {
+                    background-color: #C7C7C7;
+                    font-weight: bold;
+                    border-left: 3px solid #BC2E3A;
+                }
+            }
+        }
+    }
+}
+
+.main-page {
+    header {
+        background: url(../images/background-header.png) center top no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: #FFFFFF;
+        font-weight: 200;
+        height: 100vh;
+        .button-read {
+            @include button(#242424, #FFFFFF);
+            position: relative;
+            bottom: -90vh;
+        }
+        .img-header-model {
+            position: absolute;
+            width: 350px;
+            height: auto;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 60px;
+        }
+        .img-header-text {
+            position: absolute;
+            width: 90vw;
+            height: auto;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 105px;
+        }
+
+    }
+    section {
+        font-weight: 300;
+        h3 {
+            font-size: 5.5rem;
+            font-family: $font-family-peace;
+            // padding: 20px;
+        }
+        h4 {
+            font-size: 3rem;
+            @include tracking(-25);
+        }
+        p {
+            font-size: 1.7rem;
+            line-height: 3rem;
+            // padding: 20px;
+        }
+    }
+    .section-about {
+        .button-read {
+            @include button(#FFFFFF, #BC2E3A);
+            // position: relative;
+            // bottom: -90vh;
+        }
+    }
+
+
+}
