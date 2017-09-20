@@ -58,7 +58,7 @@ html {
 body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  color: #2A394F;
+  color: #494949;
   background-color: #FFFFFF;
   font-size: 1.5rem;
   line-height: auto; }
@@ -172,31 +172,117 @@ body {
     margin: 0 auto;
     bottom: 105px; }
 .main-page section {
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 40px auto; }
   .main-page section h3 {
     font-size: 5.5rem;
-    font-family: "Peace Sans"; }
+    font-family: "Peace Sans";
+    text-align: center;
+    padding: 20px; }
   .main-page section h4 {
     font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #6F6F6E;
     letter-spacing: -0.025em; }
   .main-page section p {
     font-size: 1.7rem;
-    line-height: 3rem; }
-.main-page .section-about .button-read {
-  letter-spacing: 0.025em;
-  background-color: #BC2E3A;
-  border: 0;
-  padding: 14px 32px;
-  font-size: 21.18px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  transition: 0.4s ease-in-out;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47); }
-  .main-page .section-about .button-read:hover {
-    background-color: #FFFFFF;
-    color: #BC2E3A; }
+    line-height: 3rem;
+    color: #6a6a6a;
+    padding: 20px 8%;
+    text-align: justify; }
+  .main-page section .button-read {
+    letter-spacing: 0.025em;
+    background-color: #BC2E3A;
+    border: 0;
+    padding: 14px 32px;
+    font-size: 21.18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transition: 0.4s ease-in-out;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47);
+    margin: 20px 0 40px;
+    position: relative;
+    left: 25%; }
+    .main-page section .button-read:hover {
+      background-color: #FFFFFF;
+      color: #BC2E3A; }
+.main-page .section-about {
+  align-content: center;
+  position: relative; }
+  .main-page .section-about .div-img-about {
+    max-width: 90vw;
+    margin: 0 auto; }
+    .main-page .section-about .div-img-about .img-about {
+      max-width: 90vw; }
+.main-page .section-services {
+  background-color: #F5F5F5; }
+  .main-page .section-services h3 {
+    margin-bottom: 50px; }
+  .main-page .section-services p {
+    text-align: center;
+    padding-bottom: 50px; }
+  .main-page .section-services .single-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .main-page .section-services .section-icon {
+    width: 74px;
+    height: 74px;
+    background-color: #BC2E3A;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47); }
+  .main-page .section-services span {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    width: 36px;
+    height: 38px;
+    padding: 9px 18px;
+    background: url(../images/image_about_service.png) center center no-repeat; }
+    .main-page .section-services span.icon-flag {
+      background-position: 0 0; }
+    .main-page .section-services span.icon-computer {
+      background-position: -36px 0; }
+    .main-page .section-services span.icon-graph {
+      background-position: -72px 0; }
+    .main-page .section-services span.icon-woman {
+      background-position: -108px 0; }
+    .main-page .section-services span.icon-map {
+      background-position: -144px 0; }
+    .main-page .section-services span.icon-message {
+      background-position: -180px 0; }
+.main-page .section-work .div-img-work {
+  position: relative;
+  max-width: 90vw;
+  height: 297px;
+  margin: 0 auto;
+  box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47);
+  background: url(../images/image_about_work.png) center center no-repeat; }
+  .main-page .section-work .div-img-work .description, .main-page .section-work .div-img-work .title {
+    color: #FFFFFF;
+    position: absolute; }
+  .main-page .section-work .div-img-work .description {
+    bottom: 20px; }
+  .main-page .section-work .div-img-work .title {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 3.974rem;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    top: 134px;
+    left: 57px; }
+.main-page .section-team {
+  background-color: #F5F5F5; }
 
 /*# sourceMappingURL=style.css.map */
