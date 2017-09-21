@@ -103,7 +103,7 @@ body {
 
 .main-page {
     header {
-        background: url(../images/background-header.png) center top no-repeat;
+        background: url(../images/background_header.png) center top no-repeat;
         background-size: cover;
         text-align: center;
         color: #FFFFFF;
@@ -204,7 +204,7 @@ body {
             width: 36px;
             height: 38px;
             padding: 9px 18px;
-	        background: url(../images/image_about_service.png) center center no-repeat;
+	        background: url(../images/icons.png) center center no-repeat;
             &.icon-flag {
                 background-position: 0 0;
             }
@@ -226,33 +226,125 @@ body {
         }
     }
     .section-work {
+        @include flex-flow-column;
+        position: relative;
+        .gallery {
+            @include flex-flow-column;
+            flex: 0 1 80%;
+            display: table;
+            overflow: hidden;
+            width: 100%;
+            margin: 20px 0;
+        }
         .div-img-work {
+            flex: 0 1 120px;
+            display: block;
+            max-width: 60vw;
+            margin: 0 auto 30px;
+            @include transform(skewX(-25deg));
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
             position: relative;
-            max-width: 90vw;
-            height: 297px;
-            margin: 0 auto;
+            transition: ease-out 0.7s 0.4s;
             box-shadow: $box-shadow;
-            background: url(../images/image_about_work.png) center center no-repeat;
-            .description, .title {
-                color: #FFFFFF;
-                position: absolute;
+            &.idea::before {
+                background: url(../images/image_about_work_1.png) no-repeat;
             }
-            .description {
-                bottom: 20px;
+            &.design::before {
+                background: url(../images/image_about_work_2.png) no-repeat;
+            }
+            &.work::before {
+                background: url(../images/image_about_work_3.png) no-repeat;
+            }
+            &.idea::before, &.design::before, &.work::before {
+                content: "";
+                position: absolute;
+                @include transform(skewX(25deg));
+                background-size: cover;
+                background-position: center;
+                width: 160%;
+                height: 120%;
+                bottom: 0;
+                left: 0;
+                transform-origin: left bottom;
+            }
+            &::after {
+                content: "";
+                display: block;
+                background: rgba(0,0,0,.4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .title, .number {
+                font-family: $font-family-lato;
+                font-weight: 700;
+                z-index: 2;
+                text-transform: uppercase;
+                @include tracking(25);
+                color: #FFFFFF;
+                position: relative;
+                @include transform(skewX(25deg));          
             }
             .title {
-                font-family: $font-family-lato;
-                font-weight: bold;
-                font-size: 3.974rem;
-                @include tracking(25);
-                text-transform: uppercase;
-                top: 134px;
-                left: 57px;
+                font-size: 3rem;
+                bottom: -67px;
             }
+            .number {
+                font-size: 4rem;
+                top: -42px;
+                float: right;
+            }
+            .description {
+                display: none;
+            }               
         }
     }
     .section-team {
         background-color: #F5F5F5;
+        position: relative;
+        .left-btn, .right-btn {
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 100;
+            @include transform(scale(0.6));
+            cursor: pointer;
+        }
+        .left-btn {
+            left: 40px;
+            border-width: 48px 48px 48px 0;
+            border-color: transparent #424240 transparent transparent;
+        }
+        .right-btn {
+            right: 40px;
+            border-width: 48px 0 48px 48px;
+            border-color: transparent transparent transparent #424240;
+        }
+        .slider-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            min-height: 600px;
+            padding: 80px;
+        }
+
+
+    }
+    .section-clients {
+
     }
 
+}
+
+.page-footer {
+    background-color: #171717;
+    background: url(../images/background_footer.png) center top no-repeat;
+    background-size: cover;
 }
