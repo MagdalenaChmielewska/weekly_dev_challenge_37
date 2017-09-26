@@ -158,6 +158,7 @@ body {
   .main-page header .img-header-model {
     position: absolute;
     width: 350px;
+    max-width: 100vw;
     height: auto;
     left: 0;
     right: 0;
@@ -172,8 +173,9 @@ body {
     margin: 0 auto;
     bottom: 105px; }
 .main-page section {
-  font-weight: 300;
-  margin: 40px auto; }
+  font-weight: 400;
+  margin: 40px auto;
+  position: relative; }
   .main-page section h3 {
     font-size: 5.5rem;
     font-family: "Peace Sans";
@@ -211,8 +213,7 @@ body {
       background-color: #FFFFFF;
       color: #BC2E3A; }
 .main-page .section-about {
-  align-content: center;
-  position: relative; }
+  align-content: center; }
   .main-page .section-about .div-img-about {
     max-width: 90vw;
     margin: 0 auto; }
@@ -269,8 +270,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
-  flex-flow: column;
-  position: relative; }
+  flex-flow: column; }
   .main-page .section-work .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -344,8 +344,7 @@ body {
     .main-page .section-work .div-img-work .description {
       display: none; }
 .main-page .section-team {
-  background-color: #F5F5F5;
-  position: relative; }
+  background-color: #F5F5F5; }
   .main-page .section-team .left-btn, .main-page .section-team .right-btn {
     position: absolute;
     top: 50%;
@@ -371,6 +370,92 @@ body {
     position: relative;
     min-height: 600px;
     padding: 80px; }
+.main-page .section-clients .container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .main-page .section-clients .container .img-container {
+    margin: 60px auto;
+    position: relative;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    overflow: hidden;
+    box-shadow: -3.508px 11.476px 40px 0px rgba(0, 1, 1, 0.47);
+    border: 8px solid #FFFFFF;
+    flex: 0 1 55vw;
+    width: 55vw;
+    height: 55vw; }
+    .main-page .section-clients .container .img-container .client-img {
+      width: 150%;
+      height: 150%;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      position: absolute;
+      top: -25%;
+      left: -25%;
+      transition: ease 0.4s; }
+    .main-page .section-clients .container .img-container .client-img.change {
+      opacity: 0; }
+  .main-page .section-clients .container .quote-container {
+    margin-left: calc(5% + 36px); }
+    .main-page .section-clients .container .quote-container .quote {
+      font-size: 2rem;
+      font-style: italic;
+      text-align: left;
+      transition: ease 0.4s;
+      position: relative;
+      margin: 0 5px 0; }
+      .main-page .section-clients .container .quote-container .quote::before {
+        content: '';
+        position: absolute;
+        background: url(../images/quote-marks.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 36px;
+        height: 30px;
+        top: 0px;
+        left: -27px; }
+    .main-page .section-clients .container .quote-container .author {
+      font-weight: 700;
+      transition: ease 0.4s; }
+    .main-page .section-clients .container .quote-container .quote.change, .main-page .section-clients .container .quote-container .author.change {
+      transform: translate(-40px, 0);
+      opacity: 0; }
+  .main-page .section-clients .container .client-list {
+    margin: 30px auto;
+    margin-left: -50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding: 0; }
+    .main-page .section-clients .container .client-list .client {
+      position: relative;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      margin: 0 20px;
+      outline: 0px solid #BC2E3A;
+      transition: 0.4s; }
+      .main-page .section-clients .container .client-list .client img {
+        position: absolute;
+        transform: rotate(-45deg);
+        top: -15px;
+        left: -15px;
+        width: 90px;
+        height: 90px; }
+    .main-page .section-clients .container .client-list .client.active {
+      outline: 5px solid #BC2E3A; }
 
 .page-footer {
   background-color: #171717;

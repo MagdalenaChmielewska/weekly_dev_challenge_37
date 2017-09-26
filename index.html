@@ -23,7 +23,7 @@
                     <li><a href="#section-about" title="A few word about us">about us</a></li>
                     <li><a href="#section-team" title="A few word our team">team</a></li>                    
                     <li><a href="#section-services" title="Find out about our service">services</a></li>
-                    <li><a href="#section-process" title="Find out about process">process</a></li>
+                    <li><a href="#" title="Find out about process">process</a></li>
                     <li><a href="#section-clients" title="">clients</a></li>
                     <li><a href="#section-work" title="">work</a></li>
                     <!--<li><div class="logo-div"> zrobic wyszukiwanie
@@ -171,22 +171,25 @@
 
                 <section class="section-clients" id="section-clients">
                     <h3>What client says</h3>
-                    <div>
-                        <img class="" alt="" src="">
-                        <!--cytat+podis-->
-                    </div>
-                    <div>
-                        <img class="" alt="" src="">
-                        <!--cytat+podis-->
-                    </div>
-                    <div>
-                        <img class="" alt="" src="">
-                        <!--cytat+podis-->
-                    </div>
-                    <div>
-                        <img class="" alt="" src="">
-                        <img class="" alt="" src="">
-                        <img class="" alt="" src="">
+                    <div class="container">
+                        <div class="img-container">
+                            <img src="images\person_2.png" alt="Client 1" class="client-img">
+                        </div>
+                        <div class="quote-container">
+                            <p class="quote">Vivamus at placerat diam. Suspendisse potenti. Cras a condimentum dui. Nulla porttitor eget diam eget auctor. Vestibulum dolor lorem, malesuada vel feugiat vel, elementum non ex.</p>
+                            <p class="author">Jimmy Doe, Designer</p>
+                            <ul class="client-list">
+                                <li class="client active" data-src="images\person_2.png" data-alt="Client 1" data-author="Jimmy Doe, Designer" data-quote="Vivamus at placerat diam. Suspendisse potenti. Cras a condimentum dui. Nulla porttitor eget diam eget auctor. Vestibulum dolor lorem, malesuada vel feugiat vel, elementum non ex.">
+                                    <img src="images\person_2.png" alt="Client 1">
+                                </li>
+                                <li class="client" data-src="images\person_1.png" data-alt="Client 2" data-author="John Doe, Manager" data-quote="Suspendisse scelerisque, diam quis aliquet gravida, velit risus finibus lacus, in consequat nisl tortor vitae nulla. Integer consectetur sed ante et vehicula. Integer auctor vestibulum est, in auctor urna interdum vel.">
+                                    <img src="images\person_1.png" alt="Client 2">
+                                </li>
+                                <li class="client" data-src="images\person_4.png" data-alt="Client 3" data-author="Jimmy Snow, Company CEO" data-quote="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">
+                                    <img src="images\person_4.png" alt="Client 3">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -235,5 +238,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/dropDown.js"></script>    
+        <script src="js/scrollDownButton.js"></script>
+        <script src="js/clientSection.js"></script>
     </body>
 </html>  
