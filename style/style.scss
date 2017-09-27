@@ -155,7 +155,7 @@ body {
         p {
             font-size: 1.7rem;
             line-height: 3rem;
-            color: #6a6a6a;
+            color: #6A6A6A;
             padding: 20px 8%;
             text-align: justify;
         }
@@ -431,4 +431,112 @@ body {
     background-color: #171717;
     background: url(../images/background_footer.png) center top no-repeat;
     background-size: cover;
+    line-height: 2.4rem;
+    @include tracking(25);
+    color: #FFFFFF;
+    padding-top: 40px;
+    p {
+        text-align: center;
+        // font-size: 1.7rem;  docelowo
+        padding: 33px 8% 0;
+        &.author {
+            padding-bottom: 58px;
+        }
+    }
+    h3 {
+        text-align: center;
+        font-size: 5.5rem;
+        font-family: $font-family-peace;
+        padding: 20px;
+        color: #9F9F9F;
+        line-height: 1;
+    }
+    .section-contact {
+        @include flex-direction-row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 55px;
+        .section {
+            @include flex-direction-row;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 45px;
+            .icon {
+                width: 36px;
+                height: 38px;
+                padding: 9px 18px;
+                background: url(../images/icons.png) center center no-repeat;
+                &.icon-mail {
+                    margin-right: 28px;
+                    background-position: -180px 0;
+                }
+                &.icon-phone {
+                    margin-right: 39px;                    
+                    height: 55px;
+                    background-position: -216px 0;
+                }
+                &.icon-map {
+                    margin-right: 34px;                  
+                    background-position: -144px 0;
+                }
+            }
+            .text {
+                h4 {
+                    padding-bottom: 16px;
+                    font-size: 2.2rem;
+                    font-weight: bold;
+                }
+                ul li {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+    .social-media {
+        @include display-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80vw;
+        // max-width: 737px; to bedzie przy wiekszych
+        border-bottom: 2px solid #6F6F6E;
+        margin: 51px auto 0;
+        .social-icon {
+            background: url(../images/social_media_icons.png) center center no-repeat;
+            height: 26px;
+            margin: 0 22px 35px;
+            &:hover {
+                @include transform(scale(1.2));
+                transition: 0.4s ease-in-out;
+            }
+            &.facebook {
+                width: 15px;
+                background-position: 0 0;
+            }
+            &.google {
+                width: 37px;
+                background-position: -15px 0;
+            }
+            &.vk {
+                width: 34px;
+                background-position: -52px 0;
+            }
+            &.youtube {
+                width: 27px;
+                background-position: -86px 0;
+            }
+            &.in {
+                width: 29px;
+                background-position: -113px 0;
+            }
+            &.digg {
+                width: 35px;
+                background-position: -142px 0;
+            }
+            &.deviantart {
+                width: 24px;
+                background-position: -177px 0;
+            }
+        }
+    }
 }

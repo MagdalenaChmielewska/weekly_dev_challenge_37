@@ -56,8 +56,6 @@
     transition: 0.3s transform linear, 0.3s -webkit-transform linear;
 }
 
-
-
 @mixin button($color, $back-color) {
     @include tracking(25);
     background-color: $back-color;
